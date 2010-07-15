@@ -1,0 +1,31 @@
+<body id="back">
+
+<h1>Listing phone-book</h1>
+<hr></hr>
+<center><table border=2>
+  <tr>
+    <th>Name</th>
+    <th>Phone no1</th>
+    <th>Phone no2</th>
+    <th>Address</th>
+  </tr>
+
+<% @phones.each do |phone| %>
+  <tr>
+    <td><%=h phone.name %>&nbsp;</td>
+    <td><%=h phone.phone_no1 %>&nbsp;</td>
+    <td><%=h phone.phone_no2 %>&nbsp;</td>
+    <td><%=h phone.address %>&nbsp;</td>
+    <td><%= link_to 'Show', phone %>&nbsp;</td>
+    <td><%= link_to 'Edit', edit_phone_path(phone) %>&nbsp;</td>
+    <td><%= link_to 'Destroy', phone, :confirm => 'Are you sure?', :method => :delete %>&nbsp;</td>
+  </tr>
+<% end %>
+</table>
+</center>
+<br />
+
+<p><%= link_to 'New phone_number', new_phone_path %></p>
+ <p class="cl"  align="right"> <%=auto_link("Go to http://www.google.com ")%><br/></p>
+
+</body >

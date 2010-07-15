@@ -1,0 +1,33 @@
+<body id="back">
+
+<h1>Editing phone</h1>
+<hr></hr>
+<% form_for(@phone) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :phone_no1 %><br />
+    <%= f.text_field :phone_no1 %>
+  </p>
+  <p>
+    <%= f.label :phone_no2 %><br />
+    <%= f.text_field :phone_no2 %>
+  </p>
+  <p>
+    <%= f.label :address %><br />
+    <%= f.text_area :address %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @phone %> |
+<%= link_to 'Back', phones_path %>
+
+ <p class="cl"  align="right"> <%=auto_link("Go to http://www.rubyonrails.com ")%><br/></p>
+</body>

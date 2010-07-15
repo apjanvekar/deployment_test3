@@ -1,0 +1,28 @@
+<body id="back">
+
+<p>
+  <b>Name:</b>
+  <%=h @phone.name %>
+</p>
+
+<p>
+  <b>Phone no1:</b>
+  <%=h @phone.phone_no1 %>
+</p>
+
+<p>
+  <b>Phone no2:</b>
+  <%=h @phone.phone_no2 %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%=h @phone.address %>
+</p>
+
+
+<%= link_to 'Edit', edit_phone_path(@phone) %> |
+<%= link_to 'Back', phones_path %>
+ <p class="cl"  align="right"> <%=auto_link("Go to http://www.google.com ")%><br/></p>
+
+</body>

@@ -1,0 +1,21 @@
+<html>
+<head>
+</head>
+<p align="right"><h3>Database Record</h3></p>
+<hr><hr>
+<%if @p!=nil%>
+<center><table border=2>
+<th>name
+<th>phone_no1
+<th>phone_no2
+<th>address</th>
+<tr>
+<td><%=@p.name%> &nbsp;
+<td><%=@p.phone_no1%> &nbsp;
+<td><%=@p.phone_no2%> &nbsp;
+<td> <%=@p.address%>&nbsp;</tr>
+</tr>
+</table></center>
+<%else%>
+<h4><%=flash[:notice]='Record Not Found'%></h4>
+<%end%><%= link_to 'Back', phones_path %></html>

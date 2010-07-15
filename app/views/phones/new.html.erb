@@ -1,0 +1,40 @@
+<h1>PHONE-BOOK</h1>
+<hr></hr>
+<% form_for(@phone) do |f| %>
+  <%= f.error_messages %>
+<body id="back">
+<p>
+   <%= f.label :name %> <%= f.text_field :name %><br />
+</p>
+<p>   
+    <%= f.label :phone_no1 %> <%= f.text_field :phone_no1 %><br />
+</p>   
+ 
+ </div>
+ <p>
+  
+     <%= f.label :phone_no2 %><%= f.text_field :phone_no2 %>
+ </p>
+ <p>
+ 
+     <%= f.label :address %> <%= f.text_area :address %><br />
+ </p>
+     <%= f.submit 'SAVE' %></p>
+   
+     <% end %>
+    
+    
+
+
+ 
+       <p class="cl"  align="right"> <%=auto_link("Go to http://www.google.com ")%><br/></p>
+   
+  <p align="right"><%=highlight('You searched for: rails', 'rails')%></p>
+
+   << <%= link_to 'Back', phones_path %>
+   
+
+
+
+
+   </body>
